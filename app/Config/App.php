@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://photoapp.secondhandwebdesign.com/';
+    public $baseURL = 'https://photoapp.secondhandwebdesign.com/';
 
     /**
      * --------------------------------------------------------------------------
