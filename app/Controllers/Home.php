@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use Google_Client;
+
 class Home extends BaseController
 {
     public function index(){
@@ -97,8 +99,13 @@ class Home extends BaseController
     }
 
     public function googleLogin(){
-        print_r($_GET);
-        print_r($_POST);
+        $client = new Google_Client(['client_id'=>'280987633492-vggneilvh8a3d7c0jtdoikqjpm40k6ca.apps.googleusercontent.com']);
+        $payload = $client->verifyIdToken($this->request->getPost('credential'));
+        if($payload){
+            print_r($payload);
+        }else{
+            die("error with google");
+        }
     }
 
 
