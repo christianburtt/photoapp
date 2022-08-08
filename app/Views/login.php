@@ -37,7 +37,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                <<div id="fb-root"></div>
+                <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=443835907646869&autoLogAppEvents=1" nonce="VAec9VLi"></script>
 <div class="fb-login-button" data-width="354" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="true" data-scope="<public_profile,email>"></div>
                 </div>
