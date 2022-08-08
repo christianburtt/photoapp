@@ -33,9 +33,9 @@ class Database extends Config
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => 'photoappdb',
-        'password' => 'personalizatiefoto',
-        'database' => 'photoapp',
+        'username' => 'secorvpy_photoapp',
+        'password' => 'Ph0+0App',
+        'database' => 'secorvpy_photoapp',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
