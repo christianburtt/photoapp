@@ -59,6 +59,7 @@ class UserModel extends Model {
             'u_id' => $u_id,
             'name' => $name,
             'username' => $username,
+            'account_type'=>'email',
             'email' => $email,
             'pw' => $pw,
             'access' => $access
@@ -73,6 +74,39 @@ class UserModel extends Model {
             
             
         return $u_id;
+    }
+
+    /**
+     * verifies a user from Google login AND/OR creates them.
+     * checks if a user has an account that is Google and logs in or creates
+     * @param string email
+     * @param string name
+     */
+    public function verifyGoogleUser($email,$name){
+        $possible = $this->db->table('users')->where('email',$email)->get()->getRow();
+        if($possible){
+            if($possible->account_type == "google"){ 
+                return $possible;
+            }else{
+                return null; // means it's some other kind of account
+            }
+            
+        }else{
+            //add a new account
+            $u_id = uniqid();
+            $data = array(
+                'u_id'=>$u_id,
+                'name'=>$name,
+                'email'=>$email,
+                'username'=>$email,
+                'account_type'=>'google',
+                'access'=>5,
+                'pw'=>sha1($email),
+                'verified'=>1
+            );
+            $this->db->table('users')->insert($data);
+            return $this->db->table('users')->where('email',$email)->get()->getRow();
+        }
     }
 
     /**

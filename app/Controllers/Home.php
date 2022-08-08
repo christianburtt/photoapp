@@ -103,6 +103,15 @@ class Home extends BaseController
         $payload = $client->verifyIdToken($this->request->getPost('credential'));
         if($payload){
             print_r($payload);
+            $userModel = new \App\Models\UserModel();
+            
+            $this->session->user = $userModel->verifyGoogleUser($payload['email'],$payload['name']);
+            if($this->session->user !== null) {
+                $this->session->logged_in = true;
+                return redirect()->to('/');
+            }else{
+                
+            }
         }else{
             die("error with google");
         }
