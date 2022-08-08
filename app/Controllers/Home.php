@@ -96,6 +96,10 @@ class Home extends BaseController
         return view('outfooter.php');
     }
 
+    public function googleLogin(){
+        echo $_GET;
+    }
+
 
     public function login() {
         $userModel = new \App\Models\UserModel();
