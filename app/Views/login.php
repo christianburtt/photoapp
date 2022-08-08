@@ -27,6 +27,11 @@
                 </div>
             </div>
             <?php echo form_close(); ?>
+            <div class="row">
+                <div class="col">
+            <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div>
+            </div>
+            </div>
         </div><!--col-->
     </div><!--row-->
 
