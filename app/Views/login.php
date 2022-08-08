@@ -28,10 +28,10 @@
             </div>
             <?php echo form_close(); ?>
             <div class="row mt-2">
-                <div class="col">
+                <div class="col text-center">
                     <div id="g_id_onload" data-client_id="280987633492-vggneilvh8a3d7c0jtdoikqjpm40k6ca.apps.googleusercontent.com" data-login_uri="https://photoapp.secondhandwebdesign.com/" data-auto_prompt="false">
                     </div>
-                    <div class="g_id_signin w-100 text-center" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="pill" data-logo_alignment="left">
+                    <div class="g_id_signin w-100" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="pill" data-logo_alignment="left">
                     </div>
                 </div>
             </div>
